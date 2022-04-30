@@ -1,8 +1,15 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import { Footer, Header } from './components';
 
 function App() {
-  return <div className="App">Dictionary App</div>;
+  return (
+    <>
+      <Header />
+      <div className="App">Dictionary App</div>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
