@@ -3,9 +3,32 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
 }
 
+html,
 body {
+  height: 100%;
   font-family: 'Poppins', sans-serif;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #02284e;
+}
+
+main {
+  flex: 1 1 auto;
+  margin-top: 25px;
+  padding: 0 25px;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #daad86 0%, #fbeec1 50%, #daad86 100%);
 }

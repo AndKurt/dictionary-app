@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.scss';
-import { Footer, Header } from './components';
+import { Footer, Header, Router } from './components';
 
 function App() {
   return (
     <>
       <Header />
-      <div className="App">Dictionary App</div>
+      <Router />
       <Footer />
     </>
   );
