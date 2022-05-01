@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { License, Loader, Phonetics, SourceUrls } from '../../components';
+import { License, Loader, Meanings, Phonetics, SourceUrls } from '../../components';
 import { useAppSelector } from '../../redux/hooks/hooks';
 import styles from './Result.module.scss';
 
@@ -32,6 +32,7 @@ export const Result = () => {
                   <Phonetics phonetics={item.phonetics} />
                   <License name={item.license.name} url={item.license.url} />
                   {item.sourceUrls && <SourceUrls sourceUrls={item.sourceUrls} />}
+                  <Meanings meanings={item.meanings} />
                 </div>
               );
             })}

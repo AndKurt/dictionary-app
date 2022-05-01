@@ -8,14 +8,17 @@ export interface IPhonetic {
   audio: string;
 }
 
-export interface IDefinition {
-  definition: string;
-  example: string;
+interface ISynAnton {
   synonyms: string[];
   antonyms: string[];
 }
 
-export interface Meaning {
+export interface IDefinition extends ISynAnton {
+  definition: string;
+  example: string;
+}
+
+export interface IMeaning extends ISynAnton {
   partOfSpeech: string;
   definitions: IDefinition[];
 }
@@ -25,6 +28,6 @@ export interface IApiWordRequest {
   phonetic?: string;
   phonetics: IPhonetic[];
   license: ILicense;
-  meanings: Meaning[];
+  meanings: IMeaning[];
   sourceUrls?: string[];
 }

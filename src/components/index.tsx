@@ -7,3 +7,5 @@ export { AudioBtn } from './AudioBtn/AudioBtn';
 export { Phonetics } from './Phonetics/Phonetics';
 export { License } from './License/License';
 export { SourceUrls } from './SoureUrls//SourceUrls';
+export { Meanings } from './Meanings/Meanings';
+export { NestedList } from './NestedList/NestedList';

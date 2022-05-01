@@ -32,6 +32,10 @@
     margin-bottom: 3px;
   }
 
+  //h6 {
+  //  margin-bottom: 6px;
+  //}
+
   a {
     font-size: 12px;
   }
@@ -45,8 +49,6 @@
     flex-direction: column;
     margin-bottom: 10px;
 
-    li {
-      display: inline-block;
-    }
+    list-style: none;
   }
 }
