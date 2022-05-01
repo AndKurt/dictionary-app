@@ -6,8 +6,6 @@ export interface ILicense {
 export interface IPhonetic {
   text: string;
   audio: string;
-  sourceUrl: string;
-  license?: ILicense;
 }
 
 export interface IDefinition {
@@ -24,8 +22,9 @@ export interface Meaning {
 
 export interface IApiWordRequest {
   word: string;
-  phonetic: string;
+  phonetic?: string;
   phonetics: IPhonetic[];
-  origin: string;
+  license: ILicense;
   meanings: Meaning[];
+  sourceUrls?: string[];
 }

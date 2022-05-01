@@ -1,5 +1,52 @@
 .result {
-  h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .wordBase {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff0000;
+  }
+
+  .helper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  h2 {
     text-align: center;
+    color: #daad86;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-shadow: 2px -1px 0px #02284e;
+    margin-bottom: 50px;
+  }
+
+  h5 {
+    margin-bottom: 3px;
+  }
+
+  a {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    li {
+      display: inline-block;
+    }
   }
 }
