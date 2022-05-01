@@ -7,7 +7,7 @@ export interface IPhonetic {
   text: string;
   audio: string;
   sourceUrl: string;
-  license: ILicense;
+  license?: ILicense;
 }
 
 export interface IDefinition {
