@@ -11,13 +11,14 @@ export const Header = () => {
       <Link to="/">
         <img className={styles.logo} src={logo} alt="logo" />
       </Link>
+      <h1>Dictionary App</h1>
       <ButtonGroup size="large" variant="text" aria-label="text button group">
         <Button>
           <Link to="/">Home</Link>
         </Button>
-        <Button>
+        {/*<Button>
           <Link to="/result">Result</Link>
-        </Button>
+        </Button>*/}
       </ButtonGroup>
     </div>
   );
