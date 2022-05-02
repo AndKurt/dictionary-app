@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IApiWordRequest } from '../../interfaces';
-import { getWord } from '../actions/actions';
+import { getWordAsync } from '../actions/actions';
 
 interface IWordState {
   apiData: IApiWordRequest[] | null;
@@ -14,64 +14,6 @@ const initialState: IWordState = {
   isError: false,
 };
 
-//const initialState: IWordState = {
-//  apiData: [
-//    {
-//      word: '',
-//      phonetic: '',
-//      phonetics: [
-//        {
-//          text: '',
-//          audio: '',
-//          sourceUrl: '',
-//          license: {
-//            name: '',
-//            url: '',
-//          },
-//        },
-//      ],
-//      origin: '',
-//      meanings: [
-//        {
-//          partOfSpeech: '',
-//          definitions: [
-//            {
-//              definition: '',
-//              example: '',
-//              synonyms: [],
-//              antonyms: [],
-//            },
-//          ],
-//        },
-//        {
-//          partOfSpeech: '',
-//          definitions: [
-//            {
-//              definition: '',
-//              example: '',
-//              synonyms: [],
-//              antonyms: [],
-//            },
-//          ],
-//        },
-//        {
-//          partOfSpeech: '',
-//          definitions: [
-//            {
-//              definition: '',
-//              example: '',
-//              synonyms: [],
-//              antonyms: [],
-//            },
-//          ],
-//        },
-//      ],
-//    },
-//  ],
-//  isLoading: false,
-//  isError: false,
-//};
-
 export const wordSlice = createSlice({
   name: 'word',
   initialState,
@@ -83,16 +25,16 @@ export const wordSlice = createSlice({
     },
   },
   extraReducers: {
-    [getWord.pending.type]: (state) => {
+    [getWordAsync.pending.type]: (state) => {
       state.isLoading = true;
       state.isError = false;
     },
-    [getWord.fulfilled.type]: (state, action: PayloadAction<IApiWordRequest[]>) => {
+    [getWordAsync.fulfilled.type]: (state, action: PayloadAction<IApiWordRequest[]>) => {
       state.isLoading = false;
       state.isError = false;
       state.apiData = action.payload;
     },
-    [getWord.rejected.type]: (state) => {
+    [getWordAsync.rejected.type]: (state) => {
       state.isLoading = false;
       state.apiData = null;
       state.isError = true;
