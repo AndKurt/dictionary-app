@@ -7,17 +7,17 @@ interface IPhonetics {
   phonetics: IPhonetic[];
 }
 
-export const Phonetics = (props: IPhonetics) => {
+export const Phonetics = ({ phonetics }: IPhonetics) => {
   return (
     <>
       <h5>Phonetic:</h5>
       <ul>
-        {props.phonetics.map((item, index) => {
+        {phonetics.map((phonetic, index) => {
           return (
-            <li key={`${index}-${item.text}`}>
+            <li key={`${index}-${phonetic.text}`}>
               <div className={styles.phonetics}>
-                {item.text && <p>[{item.text}]</p>}
-                {item.audio && <AudioBtn audio={item.audio} />}
+                {phonetic.text && <p>[{phonetic.text}]</p>}
+                {phonetic.audio && <AudioBtn audio={phonetic.audio} />}
               </div>
             </li>
           );

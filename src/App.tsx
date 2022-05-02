@@ -6,16 +6,12 @@ import { setupStore } from './redux/store/store';
 
 const store = setupStore();
 
-function App() {
-  return (
-    <>
-      <Provider store={store}>
-        <Header />
-        <Router />
-        <Footer />
-      </Provider>
-    </>
-  );
-}
+const App = () => (
+  <Provider store={store}>
+    <Header />
+    <Router />
+    <Footer />
+  </Provider>
+);
 
 export default App;

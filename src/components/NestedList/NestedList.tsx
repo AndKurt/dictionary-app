@@ -7,14 +7,14 @@ interface INestedList {
   words: string[];
 }
 
-export const NestedList = (props: INestedList) => {
+export const NestedList = ({ words, title }: INestedList) => {
   const [open, setOpen] = React.useState<boolean>(false);
 
   const handleClick = () => {
     setOpen((prev) => !prev);
   };
 
-  if (!props.words.length) {
+  if (!words.length) {
     return null;
   }
 
@@ -26,14 +26,14 @@ export const NestedList = (props: INestedList) => {
         bgcolor: 'background.paper',
       }}
       component="nav"
-      aria-labelledby={props.title}
+      aria-labelledby={title}
     >
       <ListItemButton onClick={handleClick}>
-        <ListItemText primary={props.title} />
+        <ListItemText primary={title} />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit collapsedSize="small">
-        {props.words.map((word, index) => (
+        {words.map((word, index) => (
           <ListItemText key={`${index}-${word}`} primary={word} sx={{ pl: 4 }} />
         ))}
       </Collapse>

@@ -1,8 +1,6 @@
-import React, { Key } from 'react';
+import React from 'react';
 import styles from './Meanings.module.scss';
 import { IMeaning } from '../../interfaces';
-import { style } from '@mui/system';
-import { Chip } from '@mui/material';
 import { NestedList } from '../NestedList/NestedList';
 
 interface IMeanings {
@@ -14,15 +12,15 @@ enum Words {
   Antonyms = 'Antonyms',
 }
 
-export const Meanings = (props: IMeanings) => {
-  if (!props.meanings.length) {
+export const Meanings = ({ meanings }: IMeanings) => {
+  if (!meanings.length) {
     return null;
   }
 
   return (
     <>
       <h5>Meanings:</h5>
-      {props.meanings.map(({ partOfSpeech, definitions, synonyms, antonyms }, index) => {
+      {meanings.map(({ partOfSpeech, definitions, synonyms, antonyms }, index) => {
         return (
           <ul key={`${index}-${partOfSpeech}`}>
             <li>

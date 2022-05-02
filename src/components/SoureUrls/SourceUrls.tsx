@@ -5,18 +5,16 @@ interface ISourceUrls {
   sourceUrls: string[];
 }
 
-export const SourceUrls = (props: ISourceUrls) => {
+export const SourceUrls = ({ sourceUrls }: ISourceUrls) => {
   return (
     <>
       <h5>Source URL:</h5>
       <ul>
-        {props.sourceUrls.map((item) => {
-          return (
-            <li key={item} className={styles.sourceUrl}>
-              <a href={item}>{item}</a>
-            </li>
-          );
-        })}
+        {sourceUrls.map((url) => (
+          <li key={url} className={styles.sourceUrl}>
+            <a href={url}>{url}</a>
+          </li>
+        ))}
       </ul>
     </>
   );
