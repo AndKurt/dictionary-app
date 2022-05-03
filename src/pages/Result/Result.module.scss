@@ -1,8 +1,8 @@
 @import '../../styles/variables.scss';
 
 .result {
-  padding-top: 80px;
   @include fdc-center;
+  padding-top: 60px;
 
   .wordBase {
     @include dfc;

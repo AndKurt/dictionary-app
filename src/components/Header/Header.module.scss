@@ -1,11 +1,15 @@
 @import '../../styles/variables.scss';
 
 .header {
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 80px;
   padding: 25px 40px;
   @include dfc;
   justify-content: space-between;
+  z-index: 100;
+  background: #fff;
 
   .logo {
     height: 40px;
