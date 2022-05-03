@@ -12,6 +12,7 @@ export const NotFound = () => {
   const handleClick = () => {
     dispatch(resetWordState());
   };
+
   return (
     <main className={styles.notFound}>
       <h4>Oooops...</h4>

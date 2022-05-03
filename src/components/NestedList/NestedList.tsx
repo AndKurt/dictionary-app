@@ -1,42 +1,36 @@
-import { ExpandLess, ExpandMore } from '@mui/icons-material';
-import { Collapse, List, ListItemButton, ListItemText } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
+import clsx from 'clsx';
+
+import styles from './NestedList.module.scss';
 
 interface INestedList {
   title: string;
   words: string[];
 }
 
-export const NestedList = ({ words, title }: INestedList) => {
-  const [open, setOpen] = React.useState<boolean>(false);
+export const NestedList = ({ title, words }: INestedList) => {
+  const [isOpenList, setIsOpenList] = useState(false);
 
-  const handleClick = () => {
-    setOpen((prev) => !prev);
+  const toggleList = () => {
+    setIsOpenList((prev) => !prev);
   };
 
-  if (!words.length) {
-    return null;
-  }
-
   return (
-    <List
-      sx={{
-        width: '100%',
-        maxWidth: 300,
-        bgcolor: 'background.paper',
-      }}
-      component="nav"
-      aria-labelledby={title}
-    >
-      <ListItemButton onClick={handleClick}>
-        <ListItemText primary={title} />
-        {open ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
-      <Collapse in={open} timeout="auto" unmountOnExit collapsedSize="small">
-        {words.map((word, index) => (
-          <ListItemText key={`${index}-${word}`} primary={word} sx={{ pl: 4 }} />
+    <>
+      <div
+        onClick={toggleList}
+        className={clsx(styles.titleContainer, isOpenList && styles.active)}
+      >
+        <h4>{title}</h4>
+        <span>{isOpenList ? '-' : '+'}</span>
+      </div>
+      <ol className={styles.collapse}>
+        {words.map((word) => (
+          <li className={clsx(styles.content, isOpenList && styles.show)} key={word}>
+            {word}
+          </li>
         ))}
-      </Collapse>
-    </List>
+      </ol>
+    </>
   );
 };

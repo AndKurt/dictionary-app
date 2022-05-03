@@ -26,6 +26,7 @@ export interface IMeaning extends ISynAnton {
 export interface IApiWordRequest {
   word: string;
   phonetic?: string;
+  origin?: string;
   phonetics: IPhonetic[];
   license: ILicense;
   meanings: IMeaning[];

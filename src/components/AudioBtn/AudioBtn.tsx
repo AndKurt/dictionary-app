@@ -2,15 +2,15 @@ import React from 'react';
 import styles from './AudioBtn.module.scss';
 import soundIcon from '../../assets/svg/sound.svg';
 
-interface AudioSrs {
+interface IAudioSrs {
   audio: string;
 }
 
-export const AudioBtn = (props: AudioSrs) => {
-  const audio = new Audio(props.audio);
+export const AudioBtn = ({ audio }: IAudioSrs) => {
+  const audioObj = new Audio(audio);
 
   const playAudio = () => {
-    audio.play();
+    audioObj.play();
   };
   return (
     <button className={styles.audio} onClick={playAudio}>

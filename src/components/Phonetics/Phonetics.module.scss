@@ -8,11 +8,10 @@
   }
 
   .phonetics {
-    @include dfc;
+    @include df-align-center;
+    @include text20;
     width: 100%;
-    font-size: 20px;
-    line-height: 28px;
-    color: $color-grey;
+    color: $grey;
 
     p {
       margin-right: 8px;

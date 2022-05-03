@@ -8,11 +8,11 @@
   }
 
   .sourceUrl {
-    @include fdc;
+    @include flex-column;
     margin-bottom: 8px;
 
     a {
-      color: $color-blue;
+      color: $blue;
     }
   }
 }

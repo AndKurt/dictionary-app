@@ -14,14 +14,16 @@ export const Header = () => {
   };
 
   return (
-    <div className={styles.header}>
-      <Link onClick={handleClick} to="/">
-        <img className={styles.logo} src={logo} alt="logo" />
-        Dictionary App
-      </Link>
-      <Link className={styles.btn} onClick={handleClick} to="/">
-        Home
-      </Link>
-    </div>
+    <header className={styles.header}>
+      <div className={styles.container}>
+        <Link onClick={handleClick} to="/">
+          <img className={styles.logo} src={logo} alt="logo" />
+          Dictionary App
+        </Link>
+        <Link className={styles.button} onClick={handleClick} to="/">
+          Home
+        </Link>
+      </div>
+    </header>
   );
 };

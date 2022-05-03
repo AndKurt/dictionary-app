@@ -1,12 +1,10 @@
 @import '../../styles/variables.scss';
 
 .home {
-  @include fdc-center-center;
+  @include flex-column-center-center;
 
   h1 {
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 64px;
+    @include textH1;
     margin-bottom: 48px;
     text-align: center;
   }
@@ -15,7 +13,7 @@
 @media (max-width: 560px) {
   .home {
     h1 {
-      font-size: 30px;
+      @include text36;
     }
   }
 }

@@ -7,6 +7,6 @@ export { AudioBtn } from './AudioBtn/AudioBtn';
 export { Phonetics } from './Phonetics/Phonetics';
 export { License } from './License/License';
 export { SourceUrls } from './SoureUrls//SourceUrls';
-export { Meanings } from './Meanings/Meanings';
+export { MeaningsList } from './MeaningsList/MeaningsList';
 export { NestedList } from './NestedList/NestedList';
-export { CollapseList } from './CollapseList/CollapseList';
+export { Ticker } from './Ticker/Ticker';
