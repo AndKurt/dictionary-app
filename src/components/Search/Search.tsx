@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styles from './Search.module.scss';
-import { TextField } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
+import searchIcon from '../../assets/search.svg';
+import CloseIcon from '../../assets/close.svg';
 import { useNavigate } from 'react-router-dom';
+import clsx from 'clsx';
 
 export const Search = () => {
   const [word, setWord] = useState('');
@@ -18,16 +19,27 @@ export const Search = () => {
     setWord(inputValue);
   };
 
+  const handleClear = () => {
+    setWord('');
+  };
+
   return (
     <form onSubmit={handleSubmit} className={styles.search}>
-      <SearchIcon />
-      <TextField
+      <img className={styles.searchIcon} src={searchIcon} alt="search" />
+      <input
         onChange={handleSearch}
-        inputProps={{
-          autoComplete: 'off',
-        }}
-        label="Search for a word"
-        variant="standard"
+        type="text"
+        name="search"
+        id="search"
+        value={word}
+        placeholder="Type a word..."
+        autoComplete="off"
+      />
+      <img
+        onClick={handleClear}
+        className={word ? clsx(styles.closeIcon, styles.active) : styles.closeIcon}
+        src={CloseIcon}
+        alt="close"
       />
     </form>
   );

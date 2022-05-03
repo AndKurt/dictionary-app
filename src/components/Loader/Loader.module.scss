@@ -1,12 +1,12 @@
 .loader {
   display: inline-block;
-  border: 25px solid #daad86;
+  border: 10px solid #000;
   border-radius: 50%;
-  border-top: 25px solid #659dbd;
-  border-right: 25px solid #08537e;
-  border-bottom: 25px solid #2f5870;
-  width: 150px;
-  height: 150px;
+  border-top: 10px solid #ccc;
+  border-right: 10px solid #0070f3;
+  border-bottom: 10px solid #2f5870;
+  width: 100px;
+  height: 100px;
   animation: loader 1s linear infinite;
 }
 

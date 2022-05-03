@@ -1,0 +1,52 @@
+.collapse {
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.titleContainer {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  height: 58px;
+  background: #e4e5e7;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 10px;
+
+  span {
+    font-size: 30px;
+  }
+
+  &:hover {
+    background: #0070f3;
+    color: #fff;
+  }
+
+  &.active {
+    background: #0070f3;
+    color: #fff;
+  }
+}
+
+title {
+  font-style: 20px;
+}
+
+.content {
+  font-size: 16px;
+  line-height: 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+
+  &.show {
+    height: auto;
+    max-height: 100vh;
+    transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+  }
+}
