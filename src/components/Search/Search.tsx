@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Search.module.scss';
-import searchIcon from '../../assets/search.svg';
-import CloseIcon from '../../assets/close.svg';
+import searchIcon from '../../assets/svg/search.svg';
+import CloseIcon from '../../assets/svg/close.svg';
 import { useNavigate } from 'react-router-dom';
 import clsx from 'clsx';
 

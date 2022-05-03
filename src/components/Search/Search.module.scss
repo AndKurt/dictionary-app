@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .search {
   max-width: 592px;
   width: 100%;
@@ -22,7 +24,7 @@
     &:hover,
     &:active {
       outline: none !important;
-      border: 2px solid #0070f3;
+      border: 2px solid $color-blue;
     }
   }
 

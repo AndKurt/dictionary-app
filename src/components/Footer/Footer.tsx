@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.scss';
-import githubLogo from '../../assets/githubLogo.svg';
+import githubLogo from '../../assets/svg/githubLogo.svg';
 
 const GITHUB_LINK = 'https://github.com/AndKurt/';
 const GITHUB_NAME = 'AndKurt';

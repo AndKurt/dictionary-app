@@ -7,8 +7,8 @@ interface ISourceUrls {
 
 export const SourceUrls = ({ sourceUrls }: ISourceUrls) => {
   return (
-    <>
-      <h5>Source URL:</h5>
+    <div className={styles.sourceUrlContainer}>
+      <h3>Source URL:</h3>
       <ul>
         {sourceUrls.map((url) => (
           <li key={url} className={styles.sourceUrl}>
@@ -16,6 +16,6 @@ export const SourceUrls = ({ sourceUrls }: ISourceUrls) => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };

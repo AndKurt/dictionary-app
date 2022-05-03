@@ -58,7 +58,6 @@ export const Result = ({ isResultPage }: IResultPage) => {
 
   return (
     <main className={styles.result}>
-      <h2>Results</h2>
       {isLoading ? (
         <Loader />
       ) : (
@@ -70,13 +69,13 @@ export const Result = ({ isResultPage }: IResultPage) => {
               return (
                 <div key={`${index}-${word}-base`}>
                   <div className={styles.wordBase}>
-                    <h3>{word}</h3>
-                    {phonetic && <p>[{phonetic}]</p>}
+                    <h2>{word}</h2>
+                    {phonetic && <p className={styles.phoenetic}>[{phonetic}]</p>}
                   </div>
-                  {/*<Phonetics phonetics={phonetics} />*/}
-                  {/*<License name={license.name} url={license.url} />*/}
-                  {/*{sourceUrls && <SourceUrls sourceUrls={sourceUrls} />}*/}
-                  {/*{isResultPage && <Meanings meanings={meanings} />}*/}
+                  <Phonetics phonetics={phonetics} />
+                  <License name={license.name} url={license.url} />
+                  {sourceUrls && <SourceUrls sourceUrls={sourceUrls} />}
+                  {isResultPage && <Meanings meanings={meanings} />}
                   {/*{meanings.map((meaning, i) => {
                     return <CollapseList title="Defintions" values={meaning.definitions as IDefinition[]} key={i} />
                     });

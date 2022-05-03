@@ -1,0 +1,29 @@
+// Colors
+$color-blue: #0070f3;
+$color-grey: #6d7175;
+$color-background: #f6f6f7;
+
+//mixin
+@mixin df {
+  display: flex;
+}
+
+@mixin dfc {
+  @include df;
+  align-items: center;
+}
+
+@mixin fdc {
+  @include df;
+  flex-direction: column;
+}
+
+@mixin fdc-center {
+  @include dfc;
+  flex-direction: column;
+}
+
+@mixin fdc-center-center {
+  @include fdc-center;
+  justify-content: center;
+}

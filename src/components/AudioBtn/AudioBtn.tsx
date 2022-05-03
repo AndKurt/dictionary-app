@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './AudioBtn.module.scss';
-import VolumeUpIcon from '@mui/icons-material/VolumeUp';
+import soundIcon from '../../assets/svg/sound.svg';
 
 interface AudioSrs {
   audio: string;
@@ -14,7 +14,7 @@ export const AudioBtn = (props: AudioSrs) => {
   };
   return (
     <button className={styles.audio} onClick={playAudio}>
-      <VolumeUpIcon sx={{ width: '30px' }} />
+      <img src={soundIcon} alt="sound" />
     </button>
   );
 };

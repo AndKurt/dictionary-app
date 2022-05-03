@@ -1,54 +1,41 @@
+@import '../../styles/variables.scss';
+
 .result {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-top: 80px;
+  @include fdc-center;
 
   .wordBase {
-    display: flex;
-    align-items: center;
+    @include dfc;
     flex-wrap: wrap;
-    gap: 0 20px;
     width: 100%;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #ff0000;
+    padding-bottom: 30px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #e4e5e7;
   }
 
   .helper {
-    display: flex;
-    flex-direction: column;
+    @include fdc;
+    max-width: 1200px;
     width: 100%;
+
+    h2 {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 40px;
+      margin-right: 8px;
+    }
+
+    .phoenetic {
+      font-size: 20px;
+      line-height: 28px;
+      color: $color-grey;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+      //margin-bottom: 12px;
+    }
   }
-
-  h2 {
-    text-align: center;
-    color: #daad86;
-    font-size: 25px;
-    text-transform: uppercase;
-    text-shadow: 2px -1px 0px #02284e;
-    margin-bottom: 50px;
-  }
-
-  h5 {
-    margin-bottom: 3px;
-  }
-
-  //h6 {
-  //  margin-bottom: 6px;
-  //}
-
-  a {
-    font-size: 12px;
-  }
-
-  //p {
-  //  font-size: 12px;
-  //}
-
-  //ul {
-  //  display: flex;
-  //  flex-direction: column;
-  //  margin-bottom: 10px;
-
-  //  list-style: none;
-  //}
 }

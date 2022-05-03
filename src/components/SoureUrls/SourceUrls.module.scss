@@ -1,4 +1,18 @@
-.sourceUrl {
-  display: flex;
-  flex-direction: column;
+@import '../../styles/variables.scss';
+
+.sourceUrlContainer {
+  margin-bottom: 32px;
+
+  h3 {
+    margin-bottom: 12px;
+  }
+
+  .sourceUrl {
+    @include fdc;
+    margin-bottom: 8px;
+
+    a {
+      color: $color-blue;
+    }
+  }
 }

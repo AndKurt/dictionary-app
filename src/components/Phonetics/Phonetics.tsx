@@ -9,8 +9,8 @@ interface IPhonetics {
 
 export const Phonetics = ({ phonetics }: IPhonetics) => {
   return (
-    <>
-      <h5>Phonetic:</h5>
+    <div className={styles.phoeneticContainer}>
+      <h3>Phonetic:</h3>
       <ul>
         {phonetics.map((phonetic, index) => {
           return (
@@ -23,8 +23,6 @@ export const Phonetics = ({ phonetics }: IPhonetics) => {
           );
         })}
       </ul>
-    </>
-    //<div className={styles.phoneticsContainer}>
-    //</div>
+    </div>
   );
 };

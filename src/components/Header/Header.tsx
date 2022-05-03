@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/svg/logo.svg';
 import styles from './Header.module.scss';
 import { Link } from 'react-router-dom';
 import { useAppDispatch } from '../../redux/hooks/hooks';

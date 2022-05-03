@@ -1,9 +1,11 @@
+@import '../../styles/variables.scss';
+
 .loader {
   display: inline-block;
   border: 10px solid #000;
   border-radius: 50%;
   border-top: 10px solid #ccc;
-  border-right: 10px solid #0070f3;
+  border-right: 10px solid $color-blue;
   border-bottom: 10px solid #2f5870;
   width: 100px;
   height: 100px;
